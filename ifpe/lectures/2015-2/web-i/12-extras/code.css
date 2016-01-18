@@ -1,0 +1,100 @@
+* {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #e5f6f5;
+    font-family: arial;
+}
+h1 {
+    font-size: 3em;
+    background: #00211f;
+    color: #ccedeb;
+    padding: 10px;
+    text-align: center;
+}
+h2 {
+    padding: 10px;
+    font-size: 2.4em;
+    text-shadow: 0px 0px 10px red;
+    text-align: center;
+}
+h3 {
+    padding: 10px;
+    font-size: 1.8em
+}
+p {
+    text-align: justify;
+    padding: 10px 25px;
+}
+p i {
+    text-decoration: underline;
+}
+p.quote {
+    margin: 10px 25px;
+    padding: 0 0 0 15px;
+    font-size: 0.8em;
+    color: #777;
+    border-left: 1px solid black;
+}
+hr {
+    margin: 20px 0;
+    border: 2px solid #00211f;
+}
+table {
+    margin: 0 25px 10px;
+}
+table, tr, td, th {
+    border: 1px dotted #222;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 10px;
+}
+ul {
+    margin: 0 25px 10px;
+}
+ul li {
+    margin: 5px auto;
+    list-style-type: square;
+}
+ul li.done {
+    color: #777;
+}
+ul li.now {
+    font-weight: bold;
+    color: #a60007;
+}
+
+form {
+    padding: 10px;
+    width: 400px;
+}
+form .form-group, form .form-combo {
+    margin: 10px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #777;
+}
+.form-group:last-child, .form-combo:last-child {
+    border-bottom: none;
+}
+form .label {
+    font-weight: bold;
+    color: #777;
+}
+.form-group input, .form-group select {
+    width: 200px;
+    font-size: 1.8em;
+    height: 2em;
+    padding: 0;
+}
+.form-combo label {
+    /*line-height: 2.5em;*/
+    display: block;
+}
+.form-combo input {
+    /*width: 1.5em;*/
+    /*height: 1.5em;*/
+    /*line-height: 1.5em;*/
+}
