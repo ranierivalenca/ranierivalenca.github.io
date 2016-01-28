@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript e o cliente</title>
+    <script type="text/javascript">
+        // Para interagir com o cliente, podemos utilizar algumas funções definidas *pelo cliente*, de modo a acessar os seus recursos:
+        var nome = prompt("Digite o seu nome, ó ser:");     // Abre um campo com a mensagem escrita e com um espaço para o usuário digitar algo
+        var continua = confirm("E então, " + nome +
+                ", quer mesmo continuar nessa página?");    // Abre um popup de confirmação, escrevendo a mensagem definida; nome a concatenação da variável com a string
+        if (continua) {
+            alert("Que legal, coleguinha, vamos nos divertir muito nessa página");
+        } else {
+            alert("Que pena que você não quer continuar... mas a página vai ser carregada assim mesmo, fera");
+        }
+    </script>
+</head>
+<body>
+    <h1 id="main_title">Hello JavaScript</h1>
+    <script type="text/javascript">
+        document.getElementById("main_title").innerHTML = "Hello, " + nome;
+    </script>
+</body>
+</html>

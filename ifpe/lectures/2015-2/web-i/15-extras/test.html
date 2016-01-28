@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            function updateClock() {
+                var elt = document.getElementById("relogio");
+                var d = new Date();
+                elt.innerHTML = d.toLocaleTimeString();
+                setTimeout(updateClock, 1000);
+            }
+            window.onload = updateClock;
+        </script>
+    </head>
+    <body>
+        <h1>Digital Clock</h1>
+        <span id="relogio"></span>
+    </body>
+</html>

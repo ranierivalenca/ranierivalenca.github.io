@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Relógio Digital</title>
+    <script type="text/javascript">
+        function displayTime() {
+            var elt = document.getElementById("clock");
+            var now = new Date();
+            elt.innerHTML = now.toLocaleTimeString();
+            setTimeout(displayTime, 1000);
+        }
+        window.onload = displayTime;
+        // window.addEventListener("load", displayTime, false);
+    </script>
+    <style type="text/css">
+        #clock {
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Relógio Digital</h1>
+    <span id="clock"></span>
+    <p>
+        <a href="javascript:alert(new Date().toLocaleTimeString());">Que horas <em><strong>agora</strong></em>?</a>
+    </p>
+</body>
+</html>

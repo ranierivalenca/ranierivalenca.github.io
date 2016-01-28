@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Relógio Digital</title>
+    <script type="text/javascript">
+        function updateTime() {
+            var elt = document.getElementById("clock");
+            var now = new Date();
+            elt.innerHTML = now.toLocaleTimeString();
+        }
+        
+        function invoke(f, start, interval, end) {
+            if (!start) start = 0;          
+            if (arguments.length <= 2) {
+                setTimeout(f, start);
+            } else {
+                setTimeout(repeat, start);
+                function repeat() {
+                    f();
+                    var h = setInterval(f, interval);
+                    if (end) {
+                        setTimeout(
+                            function() { clearInterval(h); }, 
+                            end
+                        );
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        #clock {
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Relógio Digital</h1>
+    <span id="clock"></span>
+    <script type="text/javascript">
+        invoke(updateTime, 2000, 1000, 5000);
+    </script>
+</body>
+</html>
