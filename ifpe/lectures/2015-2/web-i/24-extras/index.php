@@ -1,5 +1,5 @@
 <?php
-  include 'init.php';
+  require 'init.php';
 
   if (isLogged()) {
     redirect('home.php');
