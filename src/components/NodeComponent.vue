@@ -3,6 +3,7 @@ import { MyFSNode } from "@/lib/Types";
 import DirNodeComponent from "./DirNodeComponent.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
+import FileNodeComponent from "./FileNodeComponent.vue";
 
 const { node } = defineProps({
   node: {
@@ -14,10 +15,5 @@ const { node } = defineProps({
 
 <template>
   <DirNodeComponent v-if="node.isDirectory()" :dir="node.getAsDirectory()" />
-  <div v-if="node.isFile()" class="flex items-center gap-2">
-    <FontAwesomeIcon :icon="faFile" class="size-3" />
-    <RouterLink :to="`open${node.getPath()}`" class="flex-1">{{
-      `${node.getName()}.md`
-    }}</RouterLink>
-  </div>
+  <FileNodeComponent v-else :file="node.getAsFile()" />
 </template>
