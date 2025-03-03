@@ -5,7 +5,17 @@ import Header from "./components/Header.vue";
 </script>
 
 <template>
-  <div class="flex flex-row min-h-screen bg-primary-50 text-primary-950">
+  <div
+    :class="
+      twc(
+        'bg-primary-50',
+        'text-primary-950',
+        'flex',
+        'flex-row',
+        'min-h-screen',
+      )
+    "
+  >
     <FileExplorer />
     <div class="flex-1">
       <Header />
