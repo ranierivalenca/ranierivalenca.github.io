@@ -1,0 +1,31 @@
+/* 
+Inspired by https://www.youtube.com/watch?v=vIBKSmWAdIA
+Thank you!
+*/
+:root {
+  --theme-50: var(--color-zinc-50);
+  --theme-100: var(--color-zinc-100);
+  --theme-200: var(--color-zinc-200);
+  --theme-300: var(--color-zinc-300);
+  --theme-400: var(--color-zinc-400);
+  --theme-500: var(--color-zinc-500);
+  --theme-600: var(--color-zinc-600);
+  --theme-700: var(--color-zinc-700);
+  --theme-800: var(--color-zinc-800);
+  --theme-900: var(--color-zinc-900);
+  --theme-950: var(--color-zinc-950);
+}
+
+.dark {
+  --theme-50: var(--color-zinc-950);
+  --theme-100: var(--color-zinc-900);
+  --theme-200: var(--color-zinc-800);
+  --theme-300: var(--color-zinc-700);
+  --theme-400: var(--color-zinc-600);
+  --theme-500: var(--color-zinc-500);
+  --theme-600: var(--color-zinc-400);
+  --theme-700: var(--color-zinc-300);
+  --theme-800: var(--color-zinc-200);
+  --theme-900: var(--color-zinc-100);
+  --theme-950: var(--color-zinc-50);
+}
