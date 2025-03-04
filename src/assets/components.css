@@ -129,9 +129,51 @@
   main {
     @apply absolute top-0 right-0 bottom-0 left-6;
     @apply overflow-auto;
-    @apply p-4;
+    /* @apply p-4; */
 
     /* Responsive */
     @apply md:left-1/4;
+  }
+
+  .tabs {
+    @apply w-full;
+    @apply overflow-x-auto;
+
+    @apply [&::-webkit-scrollbar]:h-0.5;
+    @apply [&::-webkit-scrollbar-track]:bg-primary-100;
+    @apply [&::-webkit-scrollbar-thumb]:bg-primary-400;
+
+    .items-wrapper {
+      @apply flex flex-row gap-0;
+      @apply border-b border-primary-300;
+      .tab {
+        @apply cursor-pointer;
+        @apply px-2 py-1;
+        @apply border-r border-primary-300;
+        @apply transition duration-300;
+        @apply flex items-center gap-4;
+  
+        span {
+          @apply block;
+          @apply max-w-16;
+          @apply truncate;
+        }
+
+        button {
+          @apply px-1;
+          @apply cursor-pointer;
+          @apply hover:text-secondary-500 hover:bg-primary-300;
+        }
+  
+        &.active {
+          @apply border-b-2 border-b-secondary-500;
+        }
+        &:not(.active) {
+          @apply bg-primary-200 opacity-70;
+          @apply hover:opacity-100;
+        }
+      }
+    }
+
   }
 }

@@ -10,9 +10,14 @@ import {
 
 import NodeComponent from "./NodeComponent.vue";
 import { reactive, ref } from "vue";
+import { useEventBus } from "@/stores/eventBus";
 
+const eventBus = useEventBus();
 // --- variables ---
 const isOpen = ref(false);
+eventBus.onOpenFile(() => {
+  isOpen.value = false;
+});
 </script>
 
 <template>
@@ -27,7 +32,7 @@ const isOpen = ref(false);
       <div class="menu-content">
         <h2>Explorer</h2>
         <menu>
-          <li v-for="node in data" :key="node.getUuid()">
+          <li v-for="node in data.getNodes()" :key="node.getUuid()">
             <NodeComponent :node="node" />
           </li>
         </menu>
