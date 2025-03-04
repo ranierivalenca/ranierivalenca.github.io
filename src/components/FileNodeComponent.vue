@@ -2,6 +2,7 @@
 import { File } from "@/lib/Types";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
+import ClickableComponent from "./menu/ClickableComponent.vue";
 
 const { file } = defineProps({
   file: {
@@ -12,10 +13,7 @@ const { file } = defineProps({
 </script>
 
 <template>
-<div class="flex items-center gap-2">
-    <FontAwesomeIcon :icon="faFile" class="size-3" />
-    <RouterLink :to="`open${file.getPath()}`" class="flex-1">{{
-      `${file.getName()}.md`
-    }}</RouterLink>
-</div>
+  <ClickableComponent :fileName="file.getName()" :icon="faFile">
+    <RouterLink :to="`open${file.getPath()}`" :title="`${file.getName()}.md`" />
+  </ClickableComponent>
 </template>

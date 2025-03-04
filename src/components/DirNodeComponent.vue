@@ -6,6 +6,7 @@ import NodeComponent from "./NodeComponent.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown";
+import ClickableComponent from "./menu/ClickableComponent.vue";
 
 const { dir } = defineProps({
   dir: {
@@ -23,9 +24,13 @@ const toggle = () => {
 </script>
 
 <template>
-    <FontAwesomeIcon :icon="isOpen.value ? faChevronDown : faChevronRight" class="size-3" />
-  <span v-on:click="toggle()" class="ml-2">{{ dir.getName() }}</span>
-  <ul v-if="isOpen.value" class="px-4 border-l border-primary-300">
+  <ClickableComponent
+    :fileName="dir.getName()"
+    :icon="isOpen.value ? faChevronDown : faChevronRight"
+  >
+    <a @click="toggle" :title="dir.getName()" />
+  </ClickableComponent>
+  <ul v-if="isOpen.value">
     <li
       v-for="child in dir.getAsDirectory().getChildren()"
       :key="child.getUuid()"
