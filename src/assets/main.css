@@ -16,7 +16,30 @@
   --color-primary-800: var(--theme-800);
   --color-primary-900: var(--theme-900);
   --color-primary-950: var(--theme-950);
+
+  --color-secondary-50: var(--secondary-50);
+  --color-secondary-100: var(--secondary-100);
+  --color-secondary-200: var(--secondary-200);
+  --color-secondary-300: var(--secondary-300);
+  --color-secondary-400: var(--secondary-400);
+  --color-secondary-500: var(--secondary-500);
+  --color-secondary-600: var(--secondary-600);
+  --color-secondary-700: var(--secondary-700);
+  --color-secondary-800: var(--secondary-800);
+  --color-secondary-900: var(--secondary-900);
+  --color-secondary-950: var(--secondary-950);
+
+  --breakpoint-xs: 30rem;
 }
+
+#app {
+  @apply bg-primary-50 text-primary-950;
+  @apply flex flex-col;
+  @apply h-screen;
+  @apply overflow-hidden;
+}
+
+@import './components.css';
 
 /* #app {
   max-width: 1280px;
