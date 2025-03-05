@@ -2,10 +2,8 @@
 import { data } from "@/lib/files";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
-  faBars,
   faChevronLeft,
-  faClose,
-  faEllipsisVertical,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 import NodeComponent from "./NodeComponent.vue";
@@ -41,7 +39,7 @@ eventBus.onOpenFile(() => {
         <div class="clickable">
           <FontAwesomeIcon
             class="text-2xl"
-            :icon="isOpen ? faChevronLeft : faEllipsisVertical"
+            :icon="isOpen ? faChevronLeft : faChevronRight"
           />
         </div>
       </div>
