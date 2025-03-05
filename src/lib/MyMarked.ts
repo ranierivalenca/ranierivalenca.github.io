@@ -59,7 +59,9 @@ export class MyMarked extends Marked {
 
   public render(markdown: string): string {
     const result = this.parse(markdown) as string;
-    const clean = DOMPurify.sanitize(result);
+    const clean = DOMPurify.sanitize(result, {
+      ADD_ATTR: ["target"],
+    });
     return clean;
   }
 }

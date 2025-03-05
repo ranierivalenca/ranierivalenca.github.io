@@ -4,7 +4,7 @@ export class MyMarkedRenderer extends Renderer {
   public link(args: Tokens.Link): string {
     let result = super.link(args);
     if (args.href.startsWith("http")) {
-      result.replace("href=", "target='_blank' href=");
+      result = result.replace("href=", 'target="_blank" href=');
     }
     return result;
   }
