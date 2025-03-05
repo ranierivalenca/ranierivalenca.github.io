@@ -191,9 +191,10 @@ export class Directory extends MyFSNode {
 
 export class MyFSNodeRepository {
   private nodes: MyFSNode[] = [];
+  private home: File | null = null;
 
-  constructor(nodes: MyFSNode[]) {
-    this.nodes = nodes;
+  public static getInstance(): MyFSNodeRepository {
+    return new MyFSNodeRepository();
   }
 
   private recursiveFind<T>(
@@ -234,6 +235,24 @@ export class MyFSNodeRepository {
       (node) => node.getPath(),
       (attribute) => attribute === path
     );
+  }
+
+  public addNodes(nodeOrNodes: MyFSNode | MyFSNode[]): MyFSNodeRepository {
+    if (Array.isArray(nodeOrNodes)) {
+      this.nodes.push(...nodeOrNodes);
+    } else {
+      this.nodes.push(nodeOrNodes);
+    }
+    return this;
+  }
+
+  public setHome(node: File): MyFSNodeRepository {
+    this.home = node;
+    return this;
+  }
+
+  public getHome(): File | null {
+    return this.home;
   }
 
   public getNodeByUuid(uuid: string): MyFSNode | null {

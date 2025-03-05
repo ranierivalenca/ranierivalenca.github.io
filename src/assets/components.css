@@ -4,6 +4,12 @@
     @apply border-b border-primary-300;
     @apply p-2;
     @apply flex justify-between;
+
+    h1 {
+      @apply cursor-pointer;
+      @apply text-2xl;
+      font-variant: small-caps;
+    }
   }
 
   .dark-mode-switch {
