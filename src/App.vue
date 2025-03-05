@@ -26,9 +26,9 @@ eventBus.onOpenFile((file: File | null) => {
   <Header />
   <div class="content">
     <FileExplorer />
-    <main>
+    <div class="viewer">
       <Tabs />
       <RouterView />
-    </main>
+    </div>
   </div>
 </template>

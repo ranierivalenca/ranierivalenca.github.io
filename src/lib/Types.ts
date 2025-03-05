@@ -91,6 +91,8 @@ export abstract class MyFSNode extends Interceptable {
 export class File extends MyFSNode {
   private createdAt: Date;
   private modifiedAt: Date;
+  private markdown: string = "";
+  private markdownSet: boolean = false;
 
   constructor(
     name: string,
@@ -119,6 +121,13 @@ export class File extends MyFSNode {
 
   public touch(): void {
     this.modifiedAt = new Date();
+  }
+
+  public isMarkdownSet = (): boolean => this.markdownSet;
+  public getMarkdown = (): string => this.markdown;
+  public setMarkdown(markdown: string): void {
+    this.markdown = markdown;
+    this.markdownSet = true;
   }
 
   public isFile = (): boolean => true;

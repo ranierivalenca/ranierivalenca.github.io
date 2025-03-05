@@ -2,7 +2,7 @@
 import { File } from "@/lib/Types";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
 import ClickableComponent from "./menu/ClickableComponent.vue";
-import Openfile from "./menu/Openfile.vue";
+import OpenFile from "./menu/OpenFile.vue";
 
 const { file } = defineProps({
   file: {
@@ -15,8 +15,8 @@ const { file } = defineProps({
 <template>
   <ClickableComponent :fileName="file.getName()" :icon="faFile">
     <!-- <RouterLink :to="`open${file.getPath()}`" @click="openFile" :title="`${file.getName()}.md`" /> -->
-    <Openfile :file="file">
+    <OpenFile :file="file">
       {{ file.getName() }}
-    </Openfile>
+    </OpenFile>
   </ClickableComponent>
 </template>
