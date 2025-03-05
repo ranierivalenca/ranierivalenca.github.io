@@ -13,7 +13,7 @@ const router = createRouter({
     {
       path: "/:path(.*)",
       name: "open",
-      component: MainView,
+      component: () => import("../views/MainView.vue"),
       beforeEnter: (to, from, next) => {
         console.log({ to, from });
         if (to.path.startsWith("/data")) {
