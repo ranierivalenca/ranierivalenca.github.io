@@ -40,7 +40,7 @@ This is a [link](https://www.google.com).
 
 ### Images
 
-![Image](https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png)
+![Image](https://placehold.co/600x400/png)
 
 ### Tables
 
