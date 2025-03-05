@@ -5,14 +5,16 @@ import { onMounted, ref } from "vue";
 
 // --- variables ---
 
-const isDark = ref(false);
+const isPreferenceSaved = sessionStorage.getItem("theme") !== null;
+const isDark = ref(sessionStorage.getItem("theme") === "dark");
 
 // --- lifecycle hooks ---
 
 onMounted(() => {
   // check if user prefers dark theme
-  const isDarkPref = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (isDarkPref) {
+  const isDarkPref = window.matchMedia("(prefers-color-scheme: dark)").matches || isDark.value;
+  const shouldBeDark = (isDarkPref && !isPreferenceSaved) || (isPreferenceSaved && isDark.value);
+  if (shouldBeDark) {
     isDark.value = true;
     document.querySelector("html")!.classList.add("dark");
   }
@@ -25,9 +27,13 @@ const toggleTheme = () => {
   if (html.classList.contains("dark")) {
     isDark.value = false;
     html.classList.remove("dark");
+
+    sessionStorage.setItem("theme", "light");
   } else {
     isDark.value = true;
     html.classList.add("dark");
+    
+    sessionStorage.setItem("theme", "dark");
   }
 };
 </script>
