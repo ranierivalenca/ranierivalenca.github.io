@@ -12,7 +12,7 @@ I teach programming and web development related courses at [IFPE](https://www.if
 
 Before that, I was a professional Full Stack developer, working with (at least):
 - **PHP** and **Java** with **[Play Framework](https://www.playframework.com/)** for backend
-- **HTML**, **CSS** and **JavaScript** ([mootools](https://mootools.net/)) and [jQuery](https://jquery.com/) versions 1.x for frontend
+- **HTML**, **CSS** and **JavaScript** ([mootools](https://en.wikipedia.org/wiki/MooTools) and [jQuery](https://jquery.com/) versions 1.x for frontend
 - **SQL Server** and **PostgreSQL** for databases
 
 ## What I like
