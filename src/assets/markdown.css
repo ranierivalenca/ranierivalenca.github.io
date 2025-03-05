@@ -1,0 +1,158 @@
+/* https://github.com/sindresorhus/github-markdown-css/blob/main/github-markdown.css */
+/*  */
+
+/* --- */
+
+main {
+  @apply px-6 py-4;
+  @apply w-full;
+
+  @import "highlight.js/styles/atom-one-light.css";
+  @variant dark {
+    @import "highlight.js/styles/atom-one-dark.css";
+  }
+
+
+  /* Titles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+    @apply mt-6 mb-2;
+    &:first-child {
+      @apply mt-0;
+    }
+  }
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-lg;
+  }
+  h6 {
+    @apply text-base;
+  }
+
+  /* Text */
+  p {
+    @apply mb-4;
+  }
+
+  /* Images */
+  img {
+    /* @apply mx-auto; */
+    @apply my-4;
+  }
+
+  /* Lists */
+
+  ul,
+  ol {
+    @apply mb-4;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  li {
+    @apply ml-4;
+  }
+
+  /* Links */
+  a {
+    @apply text-secondary-600;
+    @apply hover:underline hover:text-secondary-700;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    @apply border-l-4 border-secondary-500;
+    @apply bg-primary-300;
+    @apply px-4 py-2;
+    @apply my-4;
+    p {
+      @apply mb-2;
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+    blockquote {
+      @apply py-2;
+      @apply my-2;
+    }
+  }
+
+  /* Code */
+
+  code {
+    @apply inline-block;
+    @apply bg-primary-200;
+    @apply px-1;
+    @apply rounded-sm;
+    @apply border border-primary-300;
+  }
+  pre {
+    @apply mb-2;
+    @apply w-full overflow-auto;
+    code {
+      @apply p-4;
+    }
+    /* @apply block;
+    code {
+      @apply block;
+      @apply p-4;
+      @apply rounded-lg;
+      @apply overflow-auto;
+      @apply shadow-md shadow-primary-300;
+    } */
+  }
+
+  /* Checkboxes */
+  input[type="checkbox"] {
+    /* Change checkbox appearance */
+    @apply appearance-none;
+    @apply border border-secondary-600;
+    @apply w-4 h-4;
+    @apply rounded-sm;
+    @apply checked:bg-secondary-600;
+  }
+
+  /* Tables */
+  table {
+    @apply w-full;
+    @apply border-collapse;
+    @apply mb-4;
+    @apply border border-primary-300;
+
+    th,
+    td {
+      @apply border border-primary-300;
+      @apply p-2;
+    }
+
+    th {
+      @apply bg-primary-300;
+    }
+
+    tr:nth-child(even) {
+      @apply bg-primary-100;
+    }
+  }
+}
