@@ -7,6 +7,12 @@ main {
   @apply px-6 py-4;
   @apply w-full;
 
+  @import "highlight.js/styles/atom-one-light.css";
+  @variant dark {
+    @import "highlight.js/styles/atom-one-dark.css";
+  }
+
+
   /* Titles */
   h1,
   h2,
@@ -67,7 +73,7 @@ main {
   }
 
   li {
-    @apply mb-2 ml-4;
+    @apply ml-4;
   }
 
   /* Links */
@@ -96,6 +102,13 @@ main {
 
   /* Code */
 
+  code {
+    @apply inline-block;
+    @apply bg-primary-200;
+    @apply px-1;
+    @apply rounded-sm;
+    @apply border border-primary-300;
+  }
   pre {
     @apply mb-2;
     @apply w-full overflow-auto;
@@ -110,12 +123,6 @@ main {
       @apply overflow-auto;
       @apply shadow-md shadow-primary-300;
     } */
-  }
-  code {
-    @apply inline-block;
-    @apply bg-primary-200;
-    @apply p-1;
-    @apply rounded-sm;
   }
 
   /* Checkboxes */

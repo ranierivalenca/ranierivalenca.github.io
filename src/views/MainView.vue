@@ -9,8 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { MyMarked } from "@/lib/MyMarked";
 
-import "highlight.js/styles/atom-one-dark.css";
-
 const openFiles = useOpenFilesStore();
 const eventBus = useEventBus();
 
