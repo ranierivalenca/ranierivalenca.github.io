@@ -47,7 +47,6 @@ main {
 
   /* Text */
   p {
-    @apply text-base;
     @apply mb-4;
   }
 
