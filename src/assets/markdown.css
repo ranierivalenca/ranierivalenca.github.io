@@ -5,6 +5,7 @@
 
 main {
   @apply px-6 py-4;
+  @apply w-full;
 
   /* Titles */
   h1,
@@ -97,6 +98,7 @@ main {
 
   pre {
     @apply mb-2;
+    @apply w-full overflow-auto;
     code {
       @apply p-4;
     }

@@ -34,9 +34,13 @@
 
 #app {
   @apply bg-primary-50 text-primary-950;
+  @apply text-sm;
   @apply flex flex-col;
   @apply h-screen;
   @apply overflow-hidden;
+
+  /* Responsive */
+  @apply lg:text-base;
 }
 
 @import './components.css';
