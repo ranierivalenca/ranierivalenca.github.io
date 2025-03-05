@@ -175,7 +175,7 @@
 
         span {
           @apply block;
-          @apply max-w-16;
+          @apply max-w-24;
           @apply truncate;
         }
 

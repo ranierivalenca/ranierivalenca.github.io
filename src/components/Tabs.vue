@@ -32,7 +32,7 @@ watch(activeFile, async () => {
           :class="{ active: file.getUuid() === activeFile?.getUuid() }"
           @click="eventBus.openFile(file as File)"
         >
-          <span>{{ file.getName() }}</span>
+          <span>{{ file.getName() }}.md</span>
           <button v-if="openFiles.length > 1" @click.stop="openFilesStore.closeFile(file as File)">
             <FontAwesomeIcon :icon="faClose" />
           </button>

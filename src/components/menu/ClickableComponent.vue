@@ -18,7 +18,7 @@ const { fileName, icon } = defineProps({
     <div class="item">
       <FontAwesomeIcon :icon="icon" class="size-3" />
       <span>
-        {{ fileName }}.md
+        {{ fileName }}
       </span>
 
       <!-- Caution: This MUST be an <a> tag -->

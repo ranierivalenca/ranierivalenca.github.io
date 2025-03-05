@@ -13,10 +13,10 @@ const { file } = defineProps({
 </script>
 
 <template>
-  <ClickableComponent :fileName="file.getName()" :icon="faFile">
+  <ClickableComponent :fileName="`${file.getName()}.md`" :icon="faFile">
     <!-- <RouterLink :to="`open${file.getPath()}`" @click="openFile" :title="`${file.getName()}.md`" /> -->
     <OpenFile :file="file">
-      {{ file.getName() }}
+      {{ file.getName() }}.md
     </OpenFile>
   </ClickableComponent>
 </template>
